@@ -3332,7 +3332,7 @@ var MyWallet = new function() {
 
         if (cVisible != null) {
             if ($('#' + cVisible.attr('id') + '-btn').length > 0)
-                $('#' + cVisible.attr('id') + '-btn').parent().attr('class', '');
+                $('#' + cVisible.attr('id') + '-btn').parent().attr('class', 'col-xs-3 text-center');
 
             cVisible.hide();
         }
@@ -3342,7 +3342,7 @@ var MyWallet = new function() {
         cVisible.show();
 
         if ($('#' + cVisible.attr('id') + '-btn').length > 0)
-            $('#' + cVisible.attr('id') + '-btn').parent().attr('class', 'active');
+            $('#' + cVisible.attr('id') + '-btn').parent().attr('class', 'active col-xs-3 text-center');
 
         buildVisibleView(true);
     }
