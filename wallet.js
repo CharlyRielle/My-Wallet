@@ -3340,6 +3340,10 @@ var MyWallet = new function() {
         });
     }
 
+    this.changeView = function(id) {
+        changeView(id);
+    }
+
     function changeView(id) {
         if (id === cVisible)
             return;
