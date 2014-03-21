@@ -3885,6 +3885,10 @@ var MyWallet = new function() {
                     changeView($("#home-intro"));
                 });
             });
+
+            // skip warning button in mobile
+            if (isMobile)
+                $('#show-account-settings').trigger('click');
         });
 
         $('#shared-addresses').on('show', function() {
