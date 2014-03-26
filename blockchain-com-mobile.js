@@ -225,7 +225,7 @@ $(document).ready(function() {
 
          MyWallet.addEventListener(function(event) {
              if (event == 'did_decrypt') {
-                Mobile.buildTransactionsView();
+                MyWallet.changeView($("#my-transactions"));
              }
         });
 
@@ -518,6 +518,7 @@ var Mobile = new function() {
 
         buildSome();
     }
+
 
 
 }
