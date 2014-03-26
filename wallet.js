@@ -3562,6 +3562,9 @@ var MyWallet = new function() {
     }
 
     function changeView(id) {
+        if (isMobile && id.attr('id') == "home-intro")
+            id = $("#my-transactions");
+
         if (id === cVisible)
             return;
 
