@@ -2369,7 +2369,7 @@ var MyWallet = new function() {
 
         logout_timeout = setTimeout(MyWallet.logout, MyWallet.getLogoutTime());
 
-        //MyWallet.sendEvent('did_decrypt');
+        MyWallet.sendEvent('did_decrypt');
 
         MyStore.get('multiaddr', function(multiaddrjson) {
             if (multiaddrjson != null) {
@@ -2401,8 +2401,6 @@ var MyWallet = new function() {
 
         //We have dealt the the hash values, don't need them anymore
         window.location.hash = '';
-
-        MyWallet.sendEvent('did_decrypt');
     }
 
     function checkWalletChecksum(payload_checksum, success, error) {
