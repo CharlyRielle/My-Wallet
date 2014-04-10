@@ -305,28 +305,3 @@ $(document).ready(function() {
         $('#camPlaceholder').trigger('click');
     });
 });
-
-
-var Mobile = new function() {
-    this.loadTemplate = function(name, success, error) {
-        $.ajax({
-            type: "GET",
-            url: '/template',
-            data : {format : 'plain', name : name, mobile : true},
-            success: function(html) {
-                try {
-                    $('body').html(html);
-
-                    if (success) success();
-                } catch (e) {
-                    console.log(e);
-
-                    if (error) error();
-                }
-            },
-            error : function(data) {
-                if (error) error();
-            }
-        });
-    }
-}
