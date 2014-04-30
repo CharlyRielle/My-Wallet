@@ -1368,6 +1368,8 @@ var MyWallet = new function() {
                     bindFillSendAddressButtons(recipient, latestSendAddressInput);
                 }
             }
+
+            el.find('.amount-needed').text(formatBTC(totalValueBN().toString()));
         });
 
         el.find('.add-recipient').unbind().click(function() {
